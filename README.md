@@ -39,3 +39,18 @@ since they'll be blocked and can potentially pose a risk
 ## Will this library be available to the loaded code?
 Yes, you can use the same structure to decompress other inscriptions later in your code, without the need to reference it again.
 This file is the first thing that loads, meaning the variables are always available in the context.
+
+After this script has loaded, it will add an object to the window ```window.fflate`` which containts 2 methods:
+
+```const { strFromU8, gunzipSync } = window.fflate;```
+
+To read another inscription, just load its content id and decompress it
+
+```const inscription = await fetch(`/content/${inscriptionId}`);
+const buffer = await inscription.arrayBuffer();
+const script = strFromU8(gunzipSync(new Uint8Array(buffer)));
+        
+const el = document.createElement('script');
+el.innerHTML = script;
+document.head.appendChild(el);
+```
