@@ -1,2 +1,32 @@
-# ordinals-ffloader
-An inscription to easily decompress data wherever it is ( including the Bitcoin blockchain )
+## A simple utility tool to help decompress text based files inscribed on the Bitcoin blockchain
+
+The purpose is simple: to allow compressed inscriptions to be loaded dynamically from this loader
+using a URL parameter.
+
+The code is forever stored on the Bitcoin blockchain and can never be changed. It's free to use
+and simple to understand.
+
+## What is the inscription id for this code?
+You can reference this code in your inscriptions by using this inscriptionId
+
+```/content/6e546cf6c3963fda0bfef6a95f41794f76aee86732b4df2e3190f7a0f4cf52aci0```
+
+## How can I use it?
+In order to load compressed files, you first have to compress them.
+The simplest way to compress a file is using `gzip` like so
+
+```gzip -9 -k -f -v ./yourfile.js```
+
+which will output a file `yourfile.js.gz`
+
+This file will be your inscription of whatever you are putting on Bitcoin.
+
+After this, in order to load this inscription using recursiveness, you reference the resulting
+inscriptionId like so:
+
+```<script src="/content/6e546cf6c3963fda0bfef6a95f41794f76aee86732b4df2e3190f7a0f4cf52aci0?inscriptionId=[your_inscription_id]"></script>```
+
+## How does this work?
+The script checks for a URL parameter called `inscriptionId` and passes it on to the `fetch()` function.
+The loaded file will use the same `/content/[your_inscription_id]` format and will not call external domains
+since they'll be blocked and can potentially pose a risk
