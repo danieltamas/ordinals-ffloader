@@ -46,7 +46,7 @@ After this script has loaded, it will add an object to the window ```window.ffla
 
 To read another inscription, just load its content id and decompress it
 
-```const inscription = await fetch(`/content/${inscriptionId}`);
+```const inscription = await fetch(/content/${inscriptionId});
 const buffer = await inscription.arrayBuffer();
 const script = strFromU8(gunzipSync(new Uint8Array(buffer)));
         
