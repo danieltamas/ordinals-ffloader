@@ -1,10 +1,16 @@
 ## A simple utility tool to help decompress text based files inscribed on the Bitcoin blockchain
-
 The purpose is simple: to allow compressed inscriptions to be loaded dynamically from this loader
 using a URL parameter.
 
 The code is forever stored on the Bitcoin blockchain and can never be changed. It's free to use
 and simple to understand.
+
+## Why is this needed?
+Inscribing on Bitcoin is useful and adheres to FPOC principles. However, it can be costly and
+repeated code makes no sense to be inscribed nor does it make sense to inscribe text based files
+without compressing them before hand. 
+
+It costs more sats, it bloats up the blockchain and makes no sense, hence this utility.
 
 ## What is the inscription id for this code?
 You can reference this code in your inscriptions by using this inscriptionId
