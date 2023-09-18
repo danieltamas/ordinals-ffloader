@@ -24,7 +24,7 @@ The simplest way to compress a file is using `gzip` like so
 
 which will output a file `yourfile.js.gz`
 
-This file will be your inscription of whatever you are putting on Bitcoin.
+This file has to also be inscribed on Bitcoin and after that you're able to use it in your inscriptions.
 
 After this, in order to load this inscription using recursiveness, you reference the resulting
 inscriptionId like so:
