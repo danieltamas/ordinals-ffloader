@@ -40,7 +40,7 @@ since they'll be blocked and can potentially pose a risk
 Yes, you can use the same structure to decompress other inscriptions later in your code, without the need to reference it again.
 This file is the first thing that loads, meaning the variables are always available in the context.
 
-After this script has loaded, it will add an object to the window ```window.fflate`` which containts 2 methods:
+After this script has loaded, it will add an object to the window ```window.fflate = { strFromU8, gunzipSync }``` which containts 2 methods:
 
 ```const { strFromU8, gunzipSync } = window.fflate;```
 
