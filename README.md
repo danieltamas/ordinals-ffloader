@@ -20,7 +20,7 @@ You can reference this code in your inscriptions by using this inscriptionId
 ## Do I need to reinscribe this file?
 No, the code is for reference purposes and guidance. The file is already stored on the
 Bitcoin blockchain and is easily accessible by anyone. You can check it here:
-https://ordinals.com/content/6e546cf6c3963fda0bfef6a95f41794f76aee86732b4df2e3190f7a0f4cf52aci0
+https://easymint.app/content/6e546cf6c3963fda0bfef6a95f41794f76aee86732b4df2e3190f7a0f4cf52aci0
 
 ## How can I use it?
 In order to load compressed files, you first have to compress them.
